@@ -2,31 +2,145 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<title>The 1140px Grid &middot; Fluid down to mobile</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- .css{user:agent;} - http://cssuseragent.org/ - THIS IS NECESSARY FOR THE GRID TO WORK PROPERLY IN IE -->
+	<script type="text/javascript" src="js/cssua.min.js"></script>
+	
+	<!-- Ethan Marcotte's Fluid Images - http://unstoppablerobotninja.com/entry/fluid-images/ - Makes images scale nicely in IE -->
+	<script type="text/javascript" src="js/imgSizer.js"></script>
+	
+	<!-- 1140px Grid styles for IE, just in case js is turned off -->
+	<noscript><!--[if lte IE 9]><link rel="stylesheet" href="css/ie_no_js.css" type="text/css" media="screen" /><![endif]--></noscript>
 
-	<!-- The 1140px Grid -->
+	<!-- The 1140px Grid - http://cssgrid.net/ -->
 	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
 	
-	<!--[if lte IE 9]>
-	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
-	<![endif]-->
+	<!-- Your styles -->
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	
-	<!-- Type and image presets - NOT ESSENTIAL -->
-	<link rel="stylesheet" href="css/typeimg.css" type="text/css" media="screen" />
-	<!-- Make minor type adjustments for 1024 monitors -->
-	<link rel="stylesheet" href="css/smallerscreen.css" media="only screen and (max-width: 1023px)" />
-	<!-- Resets grid for mobile -->
-	<link rel="stylesheet" href="css/mobile.css" media="handheld, only screen and (max-width: 767px)" />
-	<!-- Put your layout here -->
-	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+	<!-- Delete these embedded styles, they're just for the demo -->
+	<style type="text/css">
+	
+	body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+	.container p {
+	color: #fff;
+	line-height: 100px;
+	background: #000;
+	text-align: center;
+	margin: 20px 0 0 0;
+	}
+	
+	#intro {
+	background: #fff;
+	color: #000;
+	line-height: 24px;
+	padding: 20px 0;
+	text-align: left;
+	}
+	
+	.todolist {
+	padding: 50px 0;
+	}
+	
+	.todolist li {
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 0;
+	border-top: 1px solid #dadada;
+	}
+	
+	</style>
 
 </head>
 
 
 <body>
+
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+			<p id="intro">This page is up to test a new version of the 1140px CSS Grid. It's using <a href="http://cssuseragent.org/">.css{user:agent;}</a> to detect IE. So all grid styles can be in one style sheet. It's also using <a href="http://cssuseragent.org/">.css{user:agent;}</a> to sniff whether the user agent is a mobile device or not. I'm using this to provide a mobile layout for devices that don't support media queries like WP7.</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="threecol">
+			<img src="testimage.png" alt="Test Image" />
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="onecol last">
+			<p>1</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="twocol last">
+			<p>Two columns</p>
+		</div>
+	</div>
+</div>
 
 <div class="container">
 	<div class="row">
@@ -45,6 +159,167 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<div class="fourcol">
+			<p>Four columns</p>
+		</div>
+		<div class="fourcol">
+			<p>Four columns</p>
+		</div>
+		<div class="fourcol last">
+			<p>Four columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="onecol">
+			<p>1</p>
+		</div>
+		<div class="elevencol last">
+			<p>Eleven columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twocol">
+			<p>Two columns</p>
+		</div>
+		<div class="tencol last">
+			<p>Ten columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="threecol">
+			<p>Three columns</p>
+		</div>
+		<div class="ninecol last">
+			<p>Nine columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="fourcol">
+			<p>Four columns</p>
+		</div>
+		<div class="eightcol last">
+			<p>Eight columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="fivecol">
+			<p>Five columns</p>
+		</div>
+		<div class="sevencol last">
+			<p>Seven columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="sixcol">
+			<p>Six columns</p>
+		</div>
+		<div class="sixcol last">
+			<p>Six columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="sevencol">
+			<p>Seven columns</p>
+		</div>
+		<div class="fivecol last">
+			<p>Five columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="eightcol">
+			<p>Eight columns</p>
+		</div>
+		<div class="fourcol last">
+			<p>Four columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="ninecol">
+			<p>Nine columns</p>
+		</div>
+		<div class="threecol last">
+			<p>Three columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="tencol">
+			<p>Ten columns</p>
+		</div>
+		<div class="twocol last">
+			<p>Two columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="elevencol">
+			<p>Eleven columns</p>
+		</div>
+		<div class="onecol last">
+			<p>1</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="threecol">
+			<p>Three columns</p>
+		</div>
+		<div class="sixcol">
+			<p>Six columns</p>
+		</div>
+		<div class="threecol last">
+			<p>Three columns</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+			<ul class="todolist">
+				<h2>To do</h2>
+				<li>Check percentages in IE</li>
+				<li>Check images in IE</li>
+				<li>Once percentages are right, duplicate in ie_no_js.css file</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
 </body>
 

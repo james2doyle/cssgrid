@@ -1,9 +1,13 @@
-/* CSS Resets */
+/* ============== */
+/* ! CSS Resets   */
+/* ============== */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
 
 
-/* The 1140px Grid by Andy Taylor – http://cssgrid.net – http://www.twitter.com/andytlr – http://www.catchingzebra.com */
+/* ============================================================================================================================= */
+/* ! The 1140px Grid by Andy Taylor – http://cssgrid.net – http://www.twitter.com/andytlr – http://www.catchingzebra.com   		 */
+/* ============================================================================================================================= */
 
 .container {
 padding-left: 20px;
@@ -22,51 +26,51 @@ margin-right: 3.8%;
 float: left;
 }
 
-.onecol {
+.row .onecol {
 width: 4.85%;
 }
 
-.twocol {
-width: 13.5%;
+.row .twocol {
+width: 13.45%;
 }
 
-.threecol {
-width: 22.15%;
+.row .threecol {
+width: 22.05%;
 }
 
-.fourcol {
-width: 30.8%;
+.row .fourcol {
+width: 30.75%;
 }
 
-.fivecol {
+.row .fivecol {
 width: 39.45%;
 }
 
-.sixcol {
-width: 48.1%;
+.row .sixcol {
+width: 48%;
 }
 
-.sevencol {
+.row .sevencol {
 width: 56.75%;
 }
 
-.eightcol {
+.row .eightcol {
 width: 65.4%;
 }
 
-.ninecol {
+.row .ninecol {
 width: 74.05%;
 }
 
-.tencol {
+.row .tencol {
 width: 82.7%;
 }
 
-.elevencol {
+.row .elevencol {
 width: 91.35%;
 }
 
-.twelvecol {
+.row .twelvecol {
 width: 100%;
 float: left;
 }
@@ -77,4 +81,120 @@ margin-right: 0px;
 
 img, object, embed {
 max-width: 100%;
+}
+
+
+/* ================================================================================================== */
+/* ! Applying different column widths for IE (based on user agent) because it rounds sub pixels up    */
+/* ================================================================================================== */
+
+.ua-ie .onecol {
+width: 4%;
+}
+
+.ua-ie .twocol {
+width: 13.2%;
+}
+
+.ua-ie .threecol {
+width: 22.05%;
+}
+
+.ua-ie .fourcol {
+width: 30.6%;
+}
+
+.ua-ie .fivecol {
+width: 39%;
+}
+
+.ua-ie .sixcol {
+width: 48%;
+}
+
+.ua-ie .sevencol {
+width: 56.75%;
+}
+
+.ua-ie .eightcol {
+width: 61.6%;
+}
+
+.ua-ie .ninecol {
+width: 74.05%;
+}
+
+.ua-ie .tencol {
+width: 82%;
+}
+
+.ua-ie .elevencol {
+width: 91.35%;
+}
+
+
+/* ========================================================================================================= */
+/* ! Applying mobile styles for devices that don't support media queries (based on user agent)			     */
+/* ========================================================================================================= */
+
+.ua-mobile .row, .ua-mobile .body, .ua-mobile .container {
+width: 100%;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.ua-mobile .onecol, .ua-mobile .twocol, .ua-mobile .threecol, .ua-mobile .fourcol, .ua-mobile .fivecol, .ua-mobile .sixcol, .ua-mobile .sevencol, .ua-mobile .eightcol, .ua-mobile .ninecol, .ua-mobile .tencol, .ua-mobile .elevencol, .ua-mobile .twelvecol {
+width: auto;
+float: none;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+/* =================== */
+/* ! Smaller screens   */
+/* =================== */
+
+@media only screen and (max-width: 1023px) {
+
+body {
+font-size: 0.8em;					/* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+line-height: 1.5em;					/* As above */
+}
+
+}
+
+
+/* ========== */
+/* ! Mobile   */
+/* ========== */
+
+@media handheld, only screen and (max-width: 767px) {
+
+body {
+font-size: 16px;
+-webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
+}
+
+.row, .body, .container {
+width: 100%;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+width: auto;
+float: none;
+margin-left: 0px;
+margin-right: 0px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
 }

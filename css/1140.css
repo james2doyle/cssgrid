@@ -1,13 +1,11 @@
-/* ============== */
-/* ! CSS Resets   */
-/* ============== */
+/* CSS Resets */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
 
 
-/* ============================================================================================================================= */
-/* ! The 1140px Grid by Andy Taylor – http://cssgrid.net – http://www.twitter.com/andytlr – http://www.catchingzebra.com   		 */
-/* ============================================================================================================================= */
+/* ======================================================================================================================= */
+/* ! The 1140px Grid by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.catchingzebra.com   */
+/* ======================================================================================================================= */
 
 .container {
 padding-left: 20px;
@@ -84,9 +82,7 @@ max-width: 100%;
 }
 
 
-/* ================================================================================================== */
-/* ! Applying different column widths for IE (based on user agent) because it rounds sub pixels up    */
-/* ================================================================================================== */
+/* Applying different column widths for IE (based on user agent) because it rounds sub pixels up */
 
 .ua-ie .onecol {
 width: 4%;
@@ -133,11 +129,9 @@ width: 91.35%;
 }
 
 
-/* ========================================================================================================= */
-/* ! Applying mobile styles for devices that don't support media queries (based on user agent)			     */
-/* ========================================================================================================= */
+/* Applying mobile styles for devices that don't support media queries (based on user agent) */
 
-.ua-mobile .row, .ua-mobile .body, .ua-mobile .container {
+.ua-mobile .row, .ua-mobile body, .ua-mobile .container {
 width: 100%;
 margin-left: 0px;
 margin-right: 0px;
@@ -155,32 +149,28 @@ padding-right: 20px;
 }
 
 
-/* =================== */
-/* ! Smaller screens   */
-/* =================== */
+/* Smaller screens */
 
 @media only screen and (max-width: 1023px) {
 
 body {
-font-size: 0.8em;					/* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
-line-height: 1.5em;					/* As above */
+font-size: 0.8em;                     /* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+line-height: 1.5em;                   /* As above */
 }
 
 }
 
 
-/* ========== */
-/* ! Mobile   */
-/* ========== */
+/* Mobile */
 
 @media handheld, only screen and (max-width: 767px) {
 
 body {
 font-size: 16px;
--webkit-text-size-adjust: none;		/* Stops the iPhone scalling type up */
+-webkit-text-size-adjust: none;       /* Stops the iPhone scalling type up */
 }
 
-.row, .body, .container {
+.row, body, .container {
 width: 100%;
 margin-left: 0px;
 margin-right: 0px;

@@ -82,9 +82,42 @@ float: left;
 }
 
 [class*="col"]:first-child, .last {
-margin-left: 0px;
+margin-left: 0;
 }
 
 img, object, embed {
 max-width: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+    body {
+    font-size: 0.8em; /* Makes type a bit smaller at 1024 so layout doesn't look unbalanced */
+    line-height: 1.5em; /* As above */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .row, .body, .container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    }
+
+    .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    /* Type presets */
+
+    body {
+    font-size: 16px;
+    line-height: 24px;
+    }
 }

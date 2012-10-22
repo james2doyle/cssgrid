@@ -18,12 +18,12 @@ margin: 0 auto;
 zoom: 1;
 }
 
-.row::before, .row::after, .clearfix::before, .clearfix::after {
+.row::before, .row::after {
 content: "";
 display: table;
 }
 
-.row::after, .clearfix::after {
+.row::after {
 clear: both;
 }
 
